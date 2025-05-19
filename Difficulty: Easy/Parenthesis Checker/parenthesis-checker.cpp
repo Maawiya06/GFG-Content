@@ -6,6 +6,7 @@ using namespace std;
 // } Driver Code Ends
 
 
+
 class Solution {
   public:
     bool isBalanced(string& s) {
@@ -46,6 +47,8 @@ class Solution {
         }
     }
 };
+
+
 
 
 //{ Driver Code Starts.

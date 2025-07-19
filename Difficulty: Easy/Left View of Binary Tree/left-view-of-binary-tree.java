@@ -12,30 +12,21 @@ class Node
 }*/
 class Solution {
     // Function to return list containing elements of left view of binary tree.
-    ArrayList<Integer> leftView(Node root) {
-        ArrayList<Integer> result = new ArrayList<>();
-        if (root == null) return result;
-
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            int levelSize = queue.size();
-
-            // Traverse current level
-            for (int i = 0; i < levelSize; i++) {
-                Node curr = queue.poll();
-
-                // Capture the first node of each level
-                if (i == 0) {
-                    result.add(curr.data);
-                }
-
-                if (curr.left != null) queue.add(curr.left);
-                if (curr.right != null) queue.add(curr.right);
-            }
+    void printleftview(Node root, int level, ArrayList<Integer> leftview){
+        if(root == null) return;
+        
+        if(level == leftview.size()){
+            leftview.add(root.data);
         }
-
-        return result;
+        
+        printleftview(root.left, level + 1, leftview);
+        printleftview(root.right, level + 1, leftview);
+    }
+    
+    ArrayList<Integer> leftView(Node root) {
+        // code here
+        ArrayList<Integer> leftview = new ArrayList<>();
+        printleftview(root, 0, leftview);
+        return leftview;
     }
 }

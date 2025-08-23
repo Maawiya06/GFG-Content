@@ -1,4 +1,4 @@
-<h2><a href="https://www.geeksforgeeks.org/problems/sort-a-stack/1?page=1&category=Stack&sortBy=submissions">Sort a stack</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a stack, the task is to sort&nbsp;it such that the top of the stack has the greatest&nbsp;element.</span></p>
+<h2><a href="https://www.geeksforgeeks.org/problems/sort-a-stack/1">Sort a stack</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a stack, the task is to sort&nbsp;it such that the top of the stack has the greatest&nbsp;element.</span></p>
 <p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input:
 </strong>Stack: 3 2 1

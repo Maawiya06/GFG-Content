@@ -1,35 +1,54 @@
-import java.util.*;
-
 class Solution {
+    
     private Stack<Integer> mainStack;
     private Stack<Integer> minStack;
-
+    
     public Solution() {
         mainStack = new Stack<>();
         minStack = new Stack<>();
     }
 
+    // Add an element to the top of Stack
     public void push(int x) {
+        // code here
         mainStack.push(x);
-        if (minStack.isEmpty() || x <= minStack.peek()) {
+        if(minStack.isEmpty() || x <= minStack.peek()){
             minStack.push(x);
         }
     }
 
+    // Remove the top element from the Stack
     public void pop() {
-        if (!mainStack.isEmpty()) {
+        // code here
+        if(!mainStack.isEmpty()){
             int popped = mainStack.pop();
-            if (popped == minStack.peek()) {
+            if(popped == minStack.peek()){
                 minStack.pop();
             }
         }
     }
 
+    // Returns top element of the Stack
+        
     public int peek() {
-        return mainStack.isEmpty() ? -1 : mainStack.peek();
+        // code here
+        if(mainStack.isEmpty()){
+            return -1;
+        }
+        else{
+            return mainStack.peek();
+        }
     }
 
+        
+    // Finds minimum element of Stack
     public int getMin() {
-        return minStack.isEmpty() ? -1 : minStack.peek();
+        // code here
+        if(minStack.isEmpty()){
+            return -1;
+        }
+        else{
+            return minStack.peek();
+        }
     }
 }

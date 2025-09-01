@@ -1,5 +1,4 @@
 /*
-
 class Node{
     int data;
     Node left,right;
@@ -10,17 +9,18 @@ class Node{
 }*/
 
 class Solution {
-    // Function to check if two trees are identical.
-    boolean isIdentical(Node r1, Node r2) {
-        // Code Here
-        if(r1 == null && r2 == null){
+    boolean isIdentical(Node root1, Node root2) {
+        // code here
+        if(root1 == null && root2 == null){
             return true;
         }
-        if(r1 != null && r2 != null){
-            return (r1.data == r2.data)
-                 && isIdentical(r1.left, r2.left)
-                 && isIdentical(r1.right, r2.right);
+        
+        if(root1 != null && root2 != null){
+            return (root1.data == root2.data)
+                 && isIdentical(root1.left, root2.left)
+                 && isIdentical(root1.right, root2.right);
         }
+        
         return false;
     }
 }

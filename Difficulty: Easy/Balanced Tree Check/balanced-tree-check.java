@@ -13,31 +13,27 @@ class Node
 
 class Solution {
     int height(Node root){
-        if(root == null){
-            return 0;
-        }
+        if(root == null) return 0;
         
-        int leftheight = height(root.left);
-        int rightheight = height(root.right);
-        int finalAns = Math.max(leftheight, rightheight) + 1;
-        return finalAns;
+        int left = height(root.left);
+        int right = height(root.right);
+        int maxheight = Math.max(left, right) + 1;
+        return maxheight;
     }
     public boolean isBalanced(Node root) {
         // code here
-        if(root == null){
-            return true;
-        }
+        if(root == null) return true;
         
-        int leftHeight = height(root.left);
-        int rightHeight = height(root.right);
-        int absDiff = Math.abs(leftHeight - rightHeight);
+        int lefth = height(root.left);
+        int righth = height(root.right);
+        int maxdiff = Math.abs(lefth - righth);
         
-        boolean currNodeAbs = (absDiff <= 1);
+        boolean currNodeans = (maxdiff <= 1);
         
-        boolean leftans = isBalanced(root.left);
-        boolean rightans = isBalanced(root.right);
+        boolean leftkaans = isBalanced(root.left);
+        boolean rightkaans = isBalanced(root.right);
         
-        if(currNodeAbs && leftans && rightans){
+        if(currNodeans && leftkaans && rightkaans){
             return true;
         }
         else{
